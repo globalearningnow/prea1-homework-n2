@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Homework · Before Class 2</title>
+<style>
+  :root{
+    --green:#2D4A3E; --cream:#F5EFE4; --paper:#FBF8F1; --terra:#C4622D;
+    --terraLite:#E8915A; --ink:#23382F; --muted:#7C8C82; --line:#D8CFBE; --good:#3E7C59;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{min-height:100vh;background:var(--green);color:var(--cream);font-family:Calibri,"Segoe UI",system-ui,sans-serif;padding:28px 16px 48px;}
+  .wrap{max-width:640px;margin:0 auto;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:700;color:var(--terraLite);display:flex;justify-content:space-between;align-items:baseline;}
+  h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;line-height:1.15;margin:8px 0 4px;color:#fff;}
+  .lede{font-size:15px;color:#C9D6CD;margin:0 0 26px;max-width:54ch;}
+  .card{background:var(--paper);color:var(--ink);border-radius:14px;padding:20px 20px 22px;margin:0 0 18px;box-shadow:0 10px 24px rgba(0,0,0,.18);}
+  .tasknum{font-family:Georgia,serif;font-size:13px;font-weight:700;color:#fff;background:var(--terra);width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 26px;}
+  .topic{display:inline-block;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:700;color:var(--terra);background:#FBEDE4;border-radius:999px;padding:4px 10px;margin:0 0 10px;}
+  .thead{display:flex;gap:12px;align-items:center;margin-bottom:4px;}
+  .ttitle{font-family:Georgia,serif;font-size:19px;color:var(--ink);}
+  .time{font-size:12px;color:var(--muted);margin-left:auto;font-weight:600;}
+  .tsub{font-size:13px;color:var(--muted);margin:2px 0 14px 38px;}
+  .row{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line);}
+  .row:first-of-type{border-top:none;}
+  .cue{font-family:Georgia,serif;font-size:16px;color:var(--ink);flex:1;}
+  .cue.small{font-size:15px;}
+  .num{font-family:Georgia,serif;font-weight:700;font-size:17px;color:var(--terra);}
+  .txt{font-family:Calibri,"Segoe UI",sans-serif;font-size:15px;width:150px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);}
+  .txt.narrow{width:92px;text-align:center;}
+  select.sel{font-family:Calibri,"Segoe UI",sans-serif;font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);min-width:150px;flex:1;max-width:260px;}
+  .txt:focus,select.sel:focus{outline:2px solid var(--terraLite);outline-offset:1px;border-color:var(--terra);}
+  .ok{border-color:var(--good)!important;background:#EDF6F0!important;}
+  .no{border-color:var(--terra)!important;background:#FBEDE4!important;}
+  .mark{font-size:13px;font-weight:700;min-width:96px;text-align:left;}
+  .mark.ok{color:var(--good);}
+  .mark.no{color:var(--terra);}
+  .play{font-family:Calibri,"Segoe UI",sans-serif;font-size:14px;font-weight:700;color:#fff;background:var(--green);border:none;border-radius:8px;padding:8px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;}
+  .play:hover{background:#24382e;}
+  .play:disabled{opacity:.55;cursor:default;}
+  .play .tri{font-size:11px;}
+  .btn{font-family:Calibri,"Segoe UI",sans-serif;font-size:15px;font-weight:700;color:#fff;background:var(--terra);border:none;border-radius:9px;padding:11px 20px;margin-top:14px;cursor:pointer;}
+  .btn:hover{background:#AE5526;}
+  .btn:focus-visible,.play:focus-visible{outline:2px solid #fff;outline-offset:2px;}
+  .scoreline{margin-top:12px;font-size:14px;color:var(--ink);font-weight:600;display:none;}
+  .warn{font-size:12.5px;color:var(--terra);margin:2px 0 12px 38px;display:none;}
+  .bcard{background:var(--cream);border-left:6px solid var(--terra);border-radius:10px;padding:14px 16px;margin:0 0 16px 38px;}
+  .bc-line{font-family:Georgia,serif;font-size:15px;color:var(--ink);padding:3px 0;}
+  .foot{text-align:center;color:#9FB0A6;font-size:13px;margin-top:8px;}
+  .foot b{font-family:Georgia,serif;color:var(--cream);font-weight:400;}
+  @media (max-width:460px){ select.sel{min-width:120px;} .row{flex-wrap:wrap;} .mark{min-width:0;} .txt{width:130px;} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow"><span>Homework · Before Class 2</span><span>Pre-A1</span></div>
+    <h1>Get ready for next class</h1>
+    <p class="lede">Four short exercises to see the new words before we meet. Each one has one correct answer you can check yourself. About ten minutes.</p>
+
+    <!-- 1 — numbers to digits -->
+    <section class="card" data-task="numbers">
+      <span class="topic">Topic · Numbers</span>
+      <div class="thead"><span class="tasknum">1</span><span class="ttitle">Write the number</span><span class="time">3 min</span></div>
+      <p class="tsub">Read the word. Write it in digits.</p>
+      <div class="rows"></div>
+      <button class="btn">Check</button>
+      <p class="scoreline"></p>
+    </section>
+
+    <!-- 2 — spelling by ear (audio) -->
+    <section class="card" id="spellCard">
+      <span class="topic">Topic · The Alphabet &amp; Spelling</span>
+      <div class="thead"><span class="tasknum">2</span><span class="ttitle">Spelling by ear</span><span class="time">3 min</span></div>
+      <p class="tsub">People spell names and emails out loud. Press play, listen to the letters, and write the word.</p>
+      <p class="warn" id="spellWarn">Your browser has no voice available, so the audio won't play here. Try Chrome or Safari.</p>
+      <div class="rows" id="spellRows"></div>
+      <button class="btn" id="spellBtn">Check</button>
+      <p class="scoreline" id="spellScore"></p>
+    </section>
+
+    <!-- 3 — read the business card -->
+    <section class="card" data-task="labels">
+      <span class="topic">Topic · Personal Details</span>
+      <div class="thead"><span class="tasknum">3</span><span class="ttitle">Read the business card</span><span class="time">2 min</span></div>
+      <p class="tsub">Choose the correct label for each line.</p>
+      <div class="bcard">
+        <div class="bc-line">Ana Ruiz</div>
+        <div class="bc-line">Architect</div>
+        <div class="bc-line">ana.ruiz@mail.com</div>
+        <div class="bc-line">600 12 34 56</div>
+        <div class="bc-line">1 July 2026</div>
+      </div>
+      <div class="rows"></div>
+      <button class="btn">Check</button>
+      <p class="scoreline"></p>
+    </section>
+
+    <!-- 4 — match the reply -->
+    <section class="card" data-task="replies">
+      <span class="topic">Topic · Asking for Personal Information</span>
+      <div class="thead"><span class="tasknum">4</span><span class="ttitle">Choose the answer</span><span class="time">2 min</span></div>
+      <p class="tsub">Pick the correct reply for each question.</p>
+      <div class="rows"></div>
+      <button class="btn">Check</button>
+      <p class="scoreline"></p>
+    </section>
+
+    <p class="foot">See you in class — <b>Fernanda</b></p>
+  </div>
+
+<script>
+  var TASKS = {
+    numbers: {
+      type: "text",
+      items: [
+        { cue:"eight",       answer:"8" },
+        { cue:"sixteen",     answer:"16" },
+        { cue:"nineteen",    answer:"19" },
+        { cue:"twenty-one",  answer:"21" },
+        { cue:"forty",       answer:"40" },
+        { cue:"fifty-five",  answer:"55" },
+        { cue:"seventy",     answer:"70" },
+        { cue:"one hundred", answer:"100" }
+      ]
+    },
+    labels: {
+      type: "select",
+      options: ["Name","Job","Email","Phone","Date"],
+      items: [
+        { cue:"Ana Ruiz",           answer:"Name" },
+        { cue:"Architect",          answer:"Job" },
+        { cue:"ana.ruiz@mail.com",  answer:"Email" },
+        { cue:"600 12 34 56",       answer:"Phone" },
+        { cue:"1 July 2026",        answer:"Date" }
+      ]
+    },
+    replies: {
+      type: "select",
+      options: ["My name's Ana.","A-N-A.","It's 600 12 34 56.","It's ana@mail.com."],
+      items: [
+        { cue:"What's your name?",         answer:"My name's Ana." },
+        { cue:"How do you spell it?",      answer:"A-N-A." },
+        { cue:"What's your phone number?", answer:"It's 600 12 34 56." },
+        { cue:"What's your email?",        answer:"It's ana@mail.com." }
+      ]
+    }
+  };
+
+  function norm(s){ return (s||"").trim().toLowerCase().replace(/\s+/g," "); }
+
+  // ---- generic tasks (numbers, labels, replies) ----
+  document.querySelectorAll("section.card[data-task]").forEach(function(section){
+    var task = TASKS[section.dataset.task];
+    var key = section.dataset.task;
+    var rowsEl = section.querySelector(".rows");
+    var scoreEl = section.querySelector(".scoreline");
+    var btn = section.querySelector(".btn");
+    var checked = false;
+
+    task.items.forEach(function(item){
+      var row = document.createElement("div"); row.className = "row";
+      var cue = document.createElement("span");
+      if (key === "numbers"){ cue.className="cue"; cue.innerHTML = '<span class="num">' + item.cue + '</span>'; }
+      else { cue.className = "cue" + (key === "labels" ? " small" : ""); cue.textContent = item.cue; }
+
+      var input;
+      if (task.type === "text"){
+        input = document.createElement("input"); input.className = "txt narrow";
+        input.setAttribute("inputmode","numeric"); input.setAttribute("aria-label","Digits for " + item.cue);
+      } else {
+        input = document.createElement("select"); input.className = "sel";
+        input.setAttribute("aria-label","Answer for " + item.cue);
+        var o0 = document.createElement("option"); o0.value=""; o0.textContent="choose…"; input.appendChild(o0);
+        task.options.forEach(function(op){ var o=document.createElement("option"); o.value=op; o.textContent=op; input.appendChild(o); });
+      }
+      input.dataset.answer = item.answer;
+      input.addEventListener(task.type === "text" ? "input" : "change", function(){
+        if (checked){ checked=false; clearMarks(); scoreEl.style.display="none"; }
+      });
+      var mark = document.createElement("span"); mark.className = "mark";
+      row.appendChild(cue); row.appendChild(input); row.appendChild(mark);
+      rowsEl.appendChild(row);
+    });
+
+    function clearMarks(){
+      rowsEl.querySelectorAll("input,select").forEach(function(el){ el.classList.remove("ok","no"); });
+      rowsEl.querySelectorAll(".mark").forEach(function(m){ m.textContent=""; m.className="mark"; });
+    }
+    btn.addEventListener("click", function(){
+      checked = true; var score=0, total=task.items.length;
+      rowsEl.querySelectorAll(".row").forEach(function(row){
+        var el = row.querySelector("input,select"); var mark = row.querySelector(".mark");
+        var ok = norm(el.value) === norm(el.dataset.answer);
+        el.classList.remove("ok","no"); el.classList.add(ok?"ok":"no");
+        mark.className = "mark " + (ok?"ok":"no"); mark.textContent = ok ? "✓" : "→ " + el.dataset.answer;
+        if (ok) score++;
+      });
+      scoreEl.style.display="block"; scoreEl.textContent = "You got " + score + " / " + total + ".";
+    });
+  });
+
+  // ---- spelling by ear (Web Speech) ----
+  (function(){
+    var WORDS = ["SPAIN","DOCTOR","JULY","EMAIL"]; // country, job, month, contact word
+    var supported = ("speechSynthesis" in window) && ("SpeechSynthesisUtterance" in window);
+    var rowsEl = document.getElementById("spellRows");
+    var scoreEl = document.getElementById("spellScore");
+    var warnEl = document.getElementById("spellWarn");
+    var checked = false;
+    var enVoice = null;
+
+    function pickVoice(){
+      if (!supported) return;
+      var vs = window.speechSynthesis.getVoices() || [];
+      enVoice = vs.filter(function(v){ return /^en/i.test(v.lang); })[0] || vs[0] || null;
+    }
+    if (supported){
+      pickVoice();
+      if (window.speechSynthesis.onvoiceschanged !== undefined){
+        window.speechSynthesis.onvoiceschanged = pickVoice;
+      }
+    } else {
+      warnEl.style.display = "block";
+    }
+
+    function spell(word, onDone){
+      if (!supported){ if(onDone) onDone(); return; }
+      var letters = word.split("");
+      var i = 0;
+      window.speechSynthesis.cancel();
+      function next(){
+        if (i >= letters.length){ if(onDone) onDone(); return; }
+        var u = new SpeechSynthesisUtterance(letters[i]);
+        u.lang = "en-US"; u.rate = 0.75; u.pitch = 1;
+        if (enVoice) u.voice = enVoice;
+        u.onend = function(){ i++; setTimeout(next, 260); };
+        u.onerror = function(){ i++; setTimeout(next, 260); };
+        window.speechSynthesis.speak(u);
+      }
+      next();
+    }
+
+    WORDS.forEach(function(word, idx){
+      var row = document.createElement("div"); row.className = "row";
+
+      var btn = document.createElement("button");
+      btn.className = "play"; btn.type = "button";
+      btn.innerHTML = '<span class="tri">▶</span> Play';
+      btn.setAttribute("aria-label","Play word " + (idx+1));
+      btn.disabled = !supported;
+      btn.addEventListener("click", function(){
+        var others = rowsEl.querySelectorAll(".play");
+        others.forEach(function(b){ b.disabled = true; });
+        spell(word, function(){ others.forEach(function(b){ b.disabled = false; }); });
+      });
+
+      var input = document.createElement("input");
+      input.className = "txt"; input.setAttribute("aria-label","Word " + (idx+1));
+      input.placeholder = "type the word";
+      input.autocapitalize = "off"; input.autocomplete = "off"; input.spellcheck = false;
+      input.dataset.answer = word;
+      input.addEventListener("input", function(){
+        if (checked){ checked=false; clearMarks(); scoreEl.style.display="none"; }
+      });
+
+      var mark = document.createElement("span"); mark.className = "mark";
+
+      row.appendChild(btn); row.appendChild(input); row.appendChild(mark);
+      rowsEl.appendChild(row);
+    });
+
+    function clearMarks(){
+      rowsEl.querySelectorAll("input").forEach(function(el){ el.classList.remove("ok","no"); });
+      rowsEl.querySelectorAll(".mark").forEach(function(m){ m.textContent=""; m.className="mark"; });
+    }
+
+    document.getElementById("spellBtn").addEventListener("click", function(){
+      checked = true; var score = 0, total = 0;
+      rowsEl.querySelectorAll(".row").forEach(function(row){
+        var el = row.querySelector("input"); var mark = row.querySelector(".mark");
+        total++;
+        var ok = norm(el.value) === norm(el.dataset.answer);
+        el.classList.remove("ok","no"); el.classList.add(ok?"ok":"no");
+        mark.className = "mark " + (ok?"ok":"no");
+        mark.textContent = ok ? "✓" : "→ " + el.dataset.answer;
+        if (ok) score++;
+      });
+      scoreEl.style.display="block"; scoreEl.textContent = "You got " + score + " / " + total + ".";
+    });
+  })();
+</script>
+</body>
+</html>
